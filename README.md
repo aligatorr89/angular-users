@@ -2,6 +2,13 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.3.
 
+## My notes
+
+### Currently 3 branches
+1. master
+2. dev1
+3. jest-migration (did not succeed of this [issue] (https://medium.com/@fpmorrison/as-of-angular-cli-8-0-2-76761bbd4f7)
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

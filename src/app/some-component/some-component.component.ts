@@ -7,7 +7,7 @@ import { Component, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angula
 })
 export class SomeComponentComponent implements OnInit, AfterViewInit {
   private a: number = 1;
-  test_some_number:number;
+  test_some_number:number = 0;
   @ViewChild('title', {static: true, read: ElementRef})
   titleSomeRef: ElementRef;
   @ViewChild('ourMain', {static: true})
