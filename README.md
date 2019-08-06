@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## My notes
 
-### Currently 3 branches
+### Current branches
 1. master
 2. dev1
 3. jest-migration (did not succeed of this (https://medium.com/@fpmorrison/as-of-angular-cli-8-0-2-76761bbd4f7)
