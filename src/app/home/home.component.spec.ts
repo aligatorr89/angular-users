@@ -25,32 +25,32 @@ describe('HomeComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  test('should create', () => {
     expect(component).toBeTruthy();
   });
 
-  it(`should have property title 'angular-users'`, () => {
+  test(`should have property title 'angular-users'`, () => {
     expect(component.title).toEqual('angular-users');
   });
 
-  it(`should have property someNumber`, () => {
+  test(`should have property someNumber`, () => {
     expect(component.someNumber).toBe(1);
   });
 
-  it('should render title in a h1 tag', () => {
+  test('should render title in a h1 tag', () => {
     expect(componentDomDebug.nativeElement.querySelector('h1').textContent).toContain('Welcome to angular-users!');
   });
 
-  it('should have logo', () => {
+  test('should have logo', () => {
     const element = componentDomDebug.nativeElement.querySelector('img[src^="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="]');
     expect(element).toBeTruthy();
   });
 
-  it('should have another title in a h2 tag', () => {
+  test('should have another title in a h2 tag', () => {
     expect(componentDomDebug.nativeElement.querySelector('h2').textContent).toContain('List of links');
   });
 
-  it('should have a unordered list of links', () => {
+  test('should have a unordered list of links', () => {
     const ul = componentDomDebug.query(By.css('ul'));
     expect(ul).toBeTruthy();
 
@@ -80,7 +80,7 @@ describe('HomeComponent', () => {
     .toBe('/users-table');
   });
 
-  it('should have method click which adds someNumber', async(() => {
+  test('should have method click which adds someNumber', async(() => {
     // spyOn(component, 'click');
     // fixture.whenStable().then(() => {
     //   expect(component.click).toHaveBeenCalled();

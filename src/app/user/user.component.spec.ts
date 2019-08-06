@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { DebugElement, ElementRef } from '@angular/core';
 
 import { UserComponent } from './user.component';
-import { UsersService } from '../angular-services/users.service';
+// import { UsersService } from '../angular-services/users.service';
 
 fdescribe('UserComponent', () => {
   let component: UserComponent;
@@ -14,7 +14,7 @@ fdescribe('UserComponent', () => {
     TestBed.configureTestingModule({
       declarations: [ UserComponent ],
       providers: [
-        UsersService
+        // UsersService
       ]
     })
     .compileComponents();
@@ -29,7 +29,7 @@ fdescribe('UserComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  test('should create', () => {
     expect(component).toBeTruthy();
   });
 
