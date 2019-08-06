@@ -17,7 +17,7 @@ import { NameIconPipe } from './angular-pipes/name-icon.pipe';
 // import { UsersComponent } from './users/users.component';
 // import { UserDetailComponent } from './user-detail/user-detail.component';
 
-// import { UsersTableComponent } from './users-table/users-table.component';
+import { UsersTableComponent } from './users-table/users-table.component';
 // import { UserComponent } from './user/user.component';
 
 // import { UsersListComponent } from './users-list/users-list.component';
@@ -34,7 +34,7 @@ describe('AppComponent', () => {
         NameIconPipe,
         // UsersComponent,
         // UserDetailComponent,
-        // UsersTableComponent,
+        UsersTableComponent,
         // UserComponent,
         // UsersListComponent,
         // UsersSelectableListComponent

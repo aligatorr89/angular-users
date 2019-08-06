@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 // import { UserDetailComponent } from './user-detail/user-detail.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularMaterialModule } from './angular-material.module';
-// import { UsersTableComponent } from './users-table/users-table.component';
+import { UsersTableComponent } from './users-table/users-table.component';
 import { SomeComponentComponent } from './some-component/some-component.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
@@ -20,7 +20,7 @@ import { NameIconPipe } from './angular-pipes/name-icon.pipe';
     AppComponent,
     // UsersComponent,
     // UserDetailComponent,
-    // UsersTableComponent,
+    UsersTableComponent,
     SomeComponentComponent,
     HomeComponent,
     // UserComponent,
