@@ -14,14 +14,14 @@ import { HomeComponent } from './home/home.component'
 import { SomeComponentComponent } from './some-component/some-component.component';
 import { NameIconPipe } from './angular-pipes/name-icon.pipe';
 
-// import { UsersComponent } from './users/users.component';
-// import { UserDetailComponent } from './user-detail/user-detail.component';
+import { UsersComponent } from './users/users.component';
+import { UserDetailComponent } from './user-detail/user-detail.component';
 
 import { UsersTableComponent } from './users-table/users-table.component';
-// import { UserComponent } from './user/user.component';
+import { UserComponent } from './user/user.component';
 
-// import { UsersListComponent } from './users-list/users-list.component';
-// import { UsersSelectableListComponent } from './users-selectable-list/users-selectable-list.component';
+import { UsersListComponent } from './users-list/users-list.component';
+import { UsersSelectableListComponent } from './users-selectable-list/users-selectable-list.component';
 
 describe('AppComponent', () => {
 
@@ -32,12 +32,12 @@ describe('AppComponent', () => {
         HomeComponent,
         SomeComponentComponent,
         NameIconPipe,
-        // UsersComponent,
-        // UserDetailComponent,
+        UsersComponent,
+        UserDetailComponent,
         UsersTableComponent,
-        // UserComponent,
-        // UsersListComponent,
-        // UsersSelectableListComponent
+        UserComponent,
+        UsersListComponent,
+        UsersSelectableListComponent
       ],
       imports: [
         RouterModule.forRoot(routes),
