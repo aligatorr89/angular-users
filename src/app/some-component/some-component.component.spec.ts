@@ -54,8 +54,8 @@ describe('SomeComponentComponent', () => {
     expect(someComponentNativeElement.tagName.toLowerCase()).toBe('div');
   });
 
-  test('should match the inital snapshot from designer', () => {
-    // expect(fixture).toMatchSnb
+  test('should html match the required', () => {
+    // expect(fixture).toMa
   });
 
 });
