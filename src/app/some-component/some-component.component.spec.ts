@@ -55,7 +55,7 @@ describe('SomeComponentComponent', () => {
   });
 
   test('should match the inital snapshot from designer', () => {
-    // expect(fixture).toMat
+    // expect(fixture).toMatchSnb
   });
 
 });

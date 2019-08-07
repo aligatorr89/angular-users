@@ -16,7 +16,7 @@
     "setupFilesAfterEnv": [
       "<rootDir>/setupJest.ts"
     ],
-    "testPathIgnorePaths": [
+    "testPathIgnorePatterns": [
       "<rootDir>/node_modules",
       "<rootDir>/dist",
       "<rootDir>/src/test.ts"

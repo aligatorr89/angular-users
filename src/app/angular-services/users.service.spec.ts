@@ -11,7 +11,7 @@ describe('UsersService', () => {
   // usersService = new UsersService(<any>usersClientSpy);
 
   beforeEach(() => TestBed.configureTestingModule({
-    providers: [//UsersService
+    providers: [
     ],
     imports: [
       HttpClientTestingModule
