@@ -55,7 +55,7 @@ describe('SomeComponentComponent', () => {
   });
 
   test('should html match the required', () => {
-    
+    expect(fixture).toMatchSnapshot();
   });
 
 });
