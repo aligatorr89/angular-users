@@ -30,6 +30,10 @@ describe('SomeComponentComponent', () => {
     expect(component).toBeTruthy();
   });
 
+  test('renders correctly', () => {
+    expect(fixture).toMatchSnapshot();
+  });
+
   test('should have property test_some_number', () => {
     expect(component.test_some_number).toBeDefined();
   });
@@ -45,17 +49,10 @@ describe('SomeComponentComponent', () => {
   test('should have method onClick which changes background color', fakeAsync(() => {
     someComponentNativeElement.querySelector('div').click();
     expect(someComponentNativeElement.querySelector('div').style.backgroundColor).toBe('green');
-    // fixture.detectChanges();
-    // flush();
-    // fixture.detectChanges();
   }));
 
   test('should have root element div', () => {
     expect(someComponentNativeElement.tagName.toLowerCase()).toBe('div');
-  });
-
-  test('should html match the required', () => {
-    expect(fixture).toMatchSnapshot();
   });
 
 });
