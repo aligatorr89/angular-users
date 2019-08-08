@@ -16,11 +16,9 @@ export class SomeComponentComponent implements OnInit, AfterViewInit {
   constructor() { }
 
   ngOnInit() {
-    console.log('this is SomeComponentComponent');
   }
 
   ngAfterViewInit(): void {
-    console.log(this.titleSomeRef);
   }
 
   onClick() {
