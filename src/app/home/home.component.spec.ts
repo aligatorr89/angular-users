@@ -29,6 +29,10 @@ describe('HomeComponent', () => {
     expect(component).toBeTruthy();
   });
 
+  test('should render correctly', () => {
+    expect(fixture).toMatchSnapshot();
+  });
+
   test(`should have property title 'angular-users'`, () => {
     expect(component.title).toEqual('angular-users');
   });

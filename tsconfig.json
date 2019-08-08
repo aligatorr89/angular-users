@@ -20,6 +20,5 @@
       "dom"
     ],
     "esModuleInterop": true
-  },
-  "exclude": ["node_modules/@types/jasmine", "node_modules/@types/jasmine2wd"]
+  }
 }
