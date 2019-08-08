@@ -6,8 +6,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ### Current branches
 1. master
-2. dev1
-3. jest-migration (did not succeed of this (https://medium.com/@fpmorrison/as-of-angular-cli-8-0-2-76761bbd4f7)
+2. dev1 (to merge with dev-ahead)
+3. jest-migration (to merge soon with dev1)
 4. dev-ahead (ahead of unit tests)
 
 ## Development server
