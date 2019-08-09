@@ -23,7 +23,6 @@ export class UsersTableComponent implements OnInit {
   sort: MatSort;
 
   ngOnInit() {
-    console.log('this is UsersAsyncTableComponent');
     this.getUsers();
     this.dataSource.sort = this.sort;
   }

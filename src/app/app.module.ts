@@ -29,6 +29,7 @@ import { NameIconPipe } from './angular-pipes/name-icon.pipe';
     AppRoutingModule
   ],
   providers: [
+    HttpClientModule
   ],
   bootstrap: [AppComponent]
 })
