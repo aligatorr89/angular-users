@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
+import { Observable } from 'rxjs'
 import { UsersService } from "../angular-services/users.service";
 import { IUser } from "../User";
 
@@ -10,7 +11,7 @@ import { IUser } from "../User";
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
-  user:IUser;
+  user$: Observable<IUser>;
 
   constructor(
     private usersService: UsersService,
@@ -24,7 +25,7 @@ export class UserComponent implements OnInit {
 
   getUser() {
     const id = parseInt(this.route.snapshot.paramMap.get('id'));
-    this.usersService.getUser(id).subscribe(user => this.user = user);
+    this.user$ = this.usersService.getUser(id);
   }
 
   goBack(): void {
