@@ -1,0 +1,15 @@
+
+<app-users-selectable-list
+  *ngIf="users$ | async as users"
+  [users]="users">
+</app-users-selectable-list>
+
+<div #ourMain class="">
+  MAIN__MAIN
+  MAIN__MAIN
+  MAIN__MAIN
+  MAIN__MAIN
+</div>
+<app-some-component #title (click)="toggleUserList()"></app-some-component>
+
+<app-users-table></app-users-table>

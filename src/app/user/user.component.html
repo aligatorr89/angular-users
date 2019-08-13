@@ -1,0 +1,10 @@
+<div *ngIf="user$ | async as user" class="">
+  <table>
+    <tr>
+      <td>{{ user.id }}</td>
+      <td>{{ user.name }}</td>
+      <td>{{ user.email }}</td>
+      <td>&nbsp;</td>
+    </tr>
+  </table>
+</div>

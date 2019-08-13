@@ -1,0 +1,11 @@
+<table>
+  <tbody>
+    <tr *ngFor="let user of users" (click)="onSelect(user, $event)" class="pointer">
+      <td>
+        <button mat-stroked-button>{{ user.id }}&nbsp;{{ user.name | nameIcon }}
+          LINK:&nbsp;<a routerLink="/user/{{ user.id }}" target="_blank">{{ user.id }}</a>
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
