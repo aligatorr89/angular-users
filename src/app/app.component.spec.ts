@@ -3,7 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule }    from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
+import { APP_BASE_HREF } from '@angular/common';
 
+import { RouterTestingModule } from '@angular/router/testing';
 import { AngularMaterialModule } from './angular-material.module';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -12,15 +14,9 @@ import { routes } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component'
 import { SomeComponentComponent } from './some-component/some-component.component';
+import { NameIconPipe } from './angular-pipes/name-icon.pipe';
 
-// import { UsersComponent } from './users/users.component';
-// import { UserDetailComponent } from './user-detail/user-detail.component';
-
-// import { UsersTableComponent } from './users-table/users-table.component';
-// import { UserComponent } from './user/user.component';
-// import { NameIconPipe } from './angular-pipes/name-icon.pipe';
-// import { UsersListComponent } from './users-list/users-list.component';
-// import { UsersSelectableListComponent } from './users-selectable-list/users-selectable-list.component';
+import { UsersTableComponent } from './users-table/users-table.component';
 
 describe('AppComponent', () => {
 
@@ -30,14 +26,8 @@ describe('AppComponent', () => {
         AppComponent,
         HomeComponent,
         SomeComponentComponent,
-
-        // UsersComponent,
-        // UserDetailComponent,
-        // UsersTableComponent,
-        // UserComponent,
-        // NameIconPipe,
-        // UsersListComponent,
-        // UsersSelectableListComponent
+        NameIconPipe,
+        UsersTableComponent
       ],
       imports: [
         RouterModule.forRoot(routes),
@@ -45,18 +35,22 @@ describe('AppComponent', () => {
         AngularMaterialModule,
         HttpClientModule,
         BrowserAnimationsModule,
-        AppRoutingModule
+        AppRoutingModule,
+        RouterTestingModule
+      ],
+      providers: [
+        {provide: APP_BASE_HREF, useValue: '/'}
       ]
     }).compileComponents();
   }));
 
-  it('should create the app', () => {
+  test('should create the app', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
   });
 
-  it('should have router-outlet element', () => {
+  test('should have router-outlet element', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;

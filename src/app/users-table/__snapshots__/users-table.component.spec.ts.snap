@@ -1,0 +1,366 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UsersTableComponent should match snapshot 1`] = `
+<div
+  id="root1"
+  ng-version="8.0.2"
+>
+  <div>
+    <mat-form-field
+      class="mat-form-field ng-tns-c4-0 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-has-label mat-form-field-hide-placeholder"
+    >
+      <div
+        class="mat-form-field-wrapper"
+      >
+        <div
+          class="mat-form-field-flex"
+        >
+          
+          
+          <div
+            class="mat-form-field-infix"
+          >
+            <input
+              aria-invalid="false"
+              aria-required="false"
+              class="mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored"
+              id="mat-input-1"
+              matinput=""
+              ng-reflect-placeholder="Filter"
+              placeholder="Filter"
+            />
+            <span
+              class="mat-form-field-label-wrapper"
+            >
+              
+              <label
+                aria-owns="mat-input-1"
+                class="mat-form-field-label ng-tns-c4-0 mat-empty mat-form-field-empty ng-star-inserted"
+                for="mat-input-1"
+                id="mat-form-field-label-3"
+                ng-reflect-disabled="true"
+                ng-reflect-ng-switch="false"
+              >
+                
+                
+                Filter
+                
+                
+              </label>
+            </span>
+          </div>
+          
+        </div>
+        
+        <div
+          class="mat-form-field-underline ng-tns-c4-0 ng-star-inserted"
+        >
+          <span
+            class="mat-form-field-ripple"
+          />
+        </div>
+        <div
+          class="mat-form-field-subscript-wrapper"
+          ng-reflect-ng-switch="hint"
+        >
+          
+          
+          <div
+            class="mat-form-field-hint-wrapper ng-tns-c4-0 ng-trigger ng-trigger-transitionMessages ng-star-inserted"
+            style="opacity:1;transform:translateY(0%);0:opacity;1:transform;"
+          >
+            
+            <div
+              class="mat-form-field-hint-spacer"
+            />
+          </div>
+        </div>
+      </div>
+    </mat-form-field>
+    <table
+      class="mat-elevation-z8 mat-table"
+      mat-table=""
+      matsort=""
+      ng-reflect-data-source="[object Object]"
+      role="grid"
+    >
+      <thead
+        role="rowgroup"
+      >
+        
+        <tr
+          class="mat-header-row ng-star-inserted"
+          mat-header-row=""
+          role="row"
+        >
+          
+          <th
+            class="mat-header-cell cdk-column-select mat-column-select mat-table-sticky ng-star-inserted"
+            mat-header-cell=""
+            role="columnheader"
+            style="top: 0px; position: sticky; z-index: 100;"
+          >
+            <mat-checkbox
+              class="mat-checkbox mat-accent"
+              id="mat-checkbox-2"
+              ng-reflect-aria-label="select all"
+              ng-reflect-checked="false"
+              ng-reflect-indeterminate="false"
+            >
+              <label
+                class="mat-checkbox-layout"
+                for="mat-checkbox-2-input"
+              >
+                <div
+                  class="mat-checkbox-inner-container mat-checkbox-inner-container-no-side-margin"
+                >
+                  <input
+                    aria-checked="false"
+                    aria-label="select all"
+                    class="mat-checkbox-input cdk-visually-hidden"
+                    id="mat-checkbox-2-input"
+                    tabindex="0"
+                    type="checkbox"
+                  />
+                  <div
+                    class="mat-checkbox-ripple mat-ripple"
+                    matripple=""
+                    ng-reflect-animation="[object Object]"
+                    ng-reflect-centered="true"
+                    ng-reflect-disabled="false"
+                    ng-reflect-radius="20"
+                    ng-reflect-trigger="[object HTMLLabelElement]"
+                  >
+                    <div
+                      class="mat-ripple-element mat-checkbox-persistent-ripple"
+                    />
+                  </div>
+                  <div
+                    class="mat-checkbox-frame"
+                  />
+                  <div
+                    class="mat-checkbox-background"
+                  >
+                    <svg
+                      class="mat-checkbox-checkmark"
+                      focusable="false"
+                      version="1.1"
+                      viewBox="0 0 24 24"
+                      xml:space="preserve"
+                    >
+                      <path
+                        class="mat-checkbox-checkmark-path"
+                        d="M4.1,12.7 9,17.6 20.3,6.3"
+                        fill="none"
+                        stroke="white"
+                      />
+                    </svg>
+                    <div
+                      class="mat-checkbox-mixedmark"
+                    />
+                  </div>
+                </div>
+                <span
+                  class="mat-checkbox-label"
+                >
+                  <span
+                    style="display:none"
+                  >
+                     
+                  </span>
+                </span>
+              </label>
+            </mat-checkbox>
+          </th>
+          <th
+            class="mat-header-cell ng-tns-c7-1 cdk-column-id mat-column-id mat-table-sticky ng-star-inserted"
+            mat-header-cell=""
+            mat-sort-header=""
+            ng-reflect-id=""
+            role="columnheader"
+            style="top: 0px; position: sticky; z-index: 100;"
+          >
+            <div
+              class="mat-sort-header-container"
+            >
+              <button
+                aria-label="Change sorting for id"
+                class="mat-sort-header-button"
+                type="button"
+              >
+                Id
+              </button>
+              
+              <div
+                class="mat-sort-header-arrow ng-trigger ng-trigger-arrowPosition ng-tns-c7-1 ng-star-inserted"
+                style="transform:translateY(25%);opacity:0;0:transform;1:opacity;"
+              >
+                <div
+                  class="mat-sort-header-stem"
+                />
+                <div
+                  class="mat-sort-header-indicator ng-trigger ng-trigger-indicator"
+                  style="transform:translateY(0px);0:transform;"
+                >
+                  <div
+                    class="mat-sort-header-pointer-left ng-trigger ng-trigger-leftPointer"
+                    style="transform:rotate(-45deg);0:transform;"
+                  />
+                  <div
+                    class="mat-sort-header-pointer-right ng-trigger ng-trigger-rightPointer"
+                    style="transform:rotate(45deg);0:transform;"
+                  />
+                  <div
+                    class="mat-sort-header-pointer-middle"
+                  />
+                </div>
+              </div>
+            </div>
+          </th>
+          <th
+            class="mat-header-cell ng-tns-c7-2 cdk-column-name mat-column-name mat-table-sticky ng-star-inserted"
+            mat-header-cell=""
+            mat-sort-header=""
+            ng-reflect-id=""
+            role="columnheader"
+            style="top: 0px; position: sticky; z-index: 100;"
+          >
+            <div
+              class="mat-sort-header-container"
+            >
+              <button
+                aria-label="Change sorting for name"
+                class="mat-sort-header-button"
+                type="button"
+              >
+                Name
+              </button>
+              
+              <div
+                class="mat-sort-header-arrow ng-trigger ng-trigger-arrowPosition ng-tns-c7-2 ng-star-inserted"
+                style="transform:translateY(25%);opacity:0;0:transform;1:opacity;"
+              >
+                <div
+                  class="mat-sort-header-stem"
+                />
+                <div
+                  class="mat-sort-header-indicator ng-trigger ng-trigger-indicator"
+                  style="transform:translateY(0px);0:transform;"
+                >
+                  <div
+                    class="mat-sort-header-pointer-left ng-trigger ng-trigger-leftPointer"
+                    style="transform:rotate(-45deg);0:transform;"
+                  />
+                  <div
+                    class="mat-sort-header-pointer-right ng-trigger ng-trigger-rightPointer"
+                    style="transform:rotate(45deg);0:transform;"
+                  />
+                  <div
+                    class="mat-sort-header-pointer-middle"
+                  />
+                </div>
+              </div>
+            </div>
+          </th>
+          <th
+            class="mat-header-cell ng-tns-c7-3 cdk-column-email mat-column-email mat-table-sticky ng-star-inserted"
+            mat-header-cell=""
+            mat-sort-header=""
+            ng-reflect-id=""
+            role="columnheader"
+            style="top: 0px; position: sticky; z-index: 100;"
+          >
+            <div
+              class="mat-sort-header-container"
+            >
+              <button
+                aria-label="Change sorting for email"
+                class="mat-sort-header-button"
+                type="button"
+              >
+                Email
+              </button>
+              
+              <div
+                class="mat-sort-header-arrow ng-trigger ng-trigger-arrowPosition ng-tns-c7-3 ng-star-inserted"
+                style="transform:translateY(25%);opacity:0;0:transform;1:opacity;"
+              >
+                <div
+                  class="mat-sort-header-stem"
+                />
+                <div
+                  class="mat-sort-header-indicator ng-trigger ng-trigger-indicator"
+                  style="transform:translateY(0px);0:transform;"
+                >
+                  <div
+                    class="mat-sort-header-pointer-left ng-trigger ng-trigger-leftPointer"
+                    style="transform:rotate(-45deg);0:transform;"
+                  />
+                  <div
+                    class="mat-sort-header-pointer-right ng-trigger ng-trigger-rightPointer"
+                    style="transform:rotate(45deg);0:transform;"
+                  />
+                  <div
+                    class="mat-sort-header-pointer-middle"
+                  />
+                </div>
+              </div>
+            </div>
+          </th>
+        </tr>
+      </thead>
+      <tbody
+        role="rowgroup"
+      >
+        
+      </tbody>
+      <tfoot
+        class="mat-table-sticky"
+        role="rowgroup"
+        style="bottom: 0px; position: sticky; z-index: 10;"
+      >
+        
+        <tr
+          class="mat-footer-row ng-star-inserted"
+          mat-footer-row=""
+          role="row"
+        >
+          
+          <td
+            class="mat-footer-cell cdk-column-select mat-column-select mat-table-sticky ng-star-inserted"
+            mat-footer-cell=""
+            role="gridcell"
+            style="bottom: 0px; position: sticky; z-index: 10;"
+          >
+             
+          </td>
+          <td
+            class="mat-footer-cell cdk-column-id mat-column-id mat-table-sticky ng-star-inserted"
+            mat-footer-cell=""
+            role="gridcell"
+            style="bottom: 0px; position: sticky; z-index: 10;"
+          >
+            Total
+          </td>
+          <td
+            class="mat-footer-cell cdk-column-name mat-column-name mat-table-sticky ng-star-inserted"
+            mat-footer-cell=""
+            role="gridcell"
+            style="bottom: 0px; position: sticky; z-index: 10;"
+          >
+             $0.00 
+          </td>
+          <td
+            class="mat-footer-cell cdk-column-email mat-column-email mat-table-sticky ng-star-inserted"
+            mat-footer-cell=""
+            role="gridcell"
+            style="bottom: 0px; position: sticky; z-index: 10;"
+          >
+             
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+</div>
+`;

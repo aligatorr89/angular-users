@@ -1,15 +1,12 @@
+
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component'
-// import { UsersComponent } from './users/users.component';
-// import { UsersTableComponent } from "./users-table/users-table.component";
-// import { UserComponent }  from "./user/user.component";
+import { UsersTableComponent } from "./users-table/users-table.component";
 
 export const routes: Routes = [
   {path: '', component: HomeComponent, pathMatch: 'full'},
-  // {path: 'users', component: UsersComponent},
-  // {path: 'users-table', component: UsersTableComponent},
-  // {path: 'user/:id', component: UserComponent}
+  {path: 'users-table', component: UsersTableComponent}
 ];
 
 @NgModule({

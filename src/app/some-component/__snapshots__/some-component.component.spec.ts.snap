@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SomeComponentComponent renders correctly 1`] = `
+<app-some-component
+  a={[Function Number]}
+  someDom="undefined"
+  test_some_number="0"
+  titleSomeRef={[Function ElementRef]}
+>
+  <div
+    class=""
+  >
+    <p>
+       some-component works! B nubmer is:  
+    </p>
+  </div>
+</app-some-component>
+`;

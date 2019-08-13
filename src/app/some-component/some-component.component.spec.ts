@@ -1,10 +1,14 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed, fakeAsync, flush } from '@angular/core/testing';
+import { DebugElement, ElementRef } from '@angular/core';
+import { By } from '@angular/platform-browser';
 
 import { SomeComponentComponent } from './some-component.component';
 
 describe('SomeComponentComponent', () => {
   let component: SomeComponentComponent;
   let fixture: ComponentFixture<SomeComponentComponent>;
+  let someComponentDebugElement: DebugElement;
+  let someComponentNativeElement: HTMLElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -16,27 +20,39 @@ describe('SomeComponentComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(SomeComponentComponent);
     component = fixture.componentInstance;
+    someComponentDebugElement = fixture.debugElement;
+    someComponentNativeElement = fixture.nativeElement;
+
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  test('should create', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should have property test_some_number', () => {
+  test('renders correctly', () => {
+    expect(fixture).toMatchSnapshot();
+  });
+
+  test('should have property test_some_number', () => {
     expect(component.test_some_number).toBeDefined();
   });
 
-  it('should have property titleSomeRef type ElementRef', () => {
-    expect(component.titleSomeRef);
+  test('should have property titleSomeRef', () => {
+    expect(component.titleSomeRef).toBeTruthy();
   });
 
-  it('should have method onClick', () => {
+  test('should have method onClick', () => {
     expect(component.onClick).toBeDefined();
   });
 
-  it('should have method onClick which changes background color', () => {
-    // component.onClick
+  test('should have method onClick which changes background color', fakeAsync(() => {
+    someComponentNativeElement.querySelector('div').click();
+    expect(someComponentNativeElement.querySelector('div').style.backgroundColor).toBe('green');
+  }));
+
+  test('should have root element div', () => {
+    expect(someComponentNativeElement.tagName.toLowerCase()).toBe('div');
   });
 
 });
