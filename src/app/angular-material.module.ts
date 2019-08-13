@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule, MatCheckboxModule, MatTableModule,  MatSortModule,
   MatFormFieldModule, MatInputModule } from '@angular/material';
 
@@ -13,7 +14,8 @@ import { MatButtonModule, MatCheckboxModule, MatTableModule,  MatSortModule,
     MatTableModule,
     MatSortModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    BrowserAnimationsModule
   ],
   exports: [
     MatButtonModule,
