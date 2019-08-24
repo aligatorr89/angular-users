@@ -13,6 +13,8 @@ import { UserDetailComponent } from './user-detail/user-detail.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { NameIconPipe } from './angular-pipes/name-icon.pipe';
+import { StoreModule } from '@ngrx/store';
+import { reducers, metaReducers } from './reducers';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,14 @@ import { NameIconPipe } from './angular-pipes/name-icon.pipe';
     AngularMaterialModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    StoreModule.forRoot(reducers, {
+      metaReducers,
+      runtimeChecks: {
+        strictStateImmutability: true,
+        strictActionImmutability: true
+      }
+    })
   ],
   providers: [
     HttpClientModule
