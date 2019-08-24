@@ -54,7 +54,7 @@ describe('UsersService', () => {
       //   { status: 200, statusText: 'OK', body: expectedUsers });
       // req.event(expectedResponse);
 
-      // Respond with the mock heroes
+      // Respond with the mock users
       req.flush(mockedUsers);
     });
   });

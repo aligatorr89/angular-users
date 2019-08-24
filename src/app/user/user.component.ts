@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { Location } from '@angular/common';
-import { Observable } from 'rxjs'
+import { ActivatedRoute, ParamMap } from '@angular/router';
+// import { Location } from '@angular/common';
+import { Observable } from 'rxjs';
+import { switchMap } from 'rxjs/operators';
 import { UsersService } from "../angular-services/users.service";
 import { IUser } from "../User";
 
@@ -16,7 +17,7 @@ export class UserComponent implements OnInit {
   constructor(
     private usersService: UsersService,
     private route: ActivatedRoute,
-    private location: Location
+    // private location: Location
   ) { }
 
   ngOnInit() {
@@ -24,11 +25,13 @@ export class UserComponent implements OnInit {
   }
 
   getUser() {
-    const id = parseInt(this.route.snapshot.paramMap.get('id'));
-    this.user$ = this.usersService.getUser(id);
+    // const id = parseInt(this.route.snapshot.paramMap.get('id'));
+    this.user$ = this.route.paramMap.pipe(
+      switchMap((params: ParamMap) => this.usersService.getUser(params.get('id')))
+    );
   }
 
-  goBack(): void {
-    this.location.back();
-  }
+  // goBack(): void {
+  //   // this.location.back();
+  // }
 }

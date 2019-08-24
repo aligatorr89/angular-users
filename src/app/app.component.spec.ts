@@ -15,8 +15,9 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component'
 import { SomeComponentComponent } from './some-component/some-component.component';
 import { NameIconPipe } from './angular-pipes/name-icon.pipe';
-
 import { UsersTableComponent } from './users-table/users-table.component';
+import { UserComponent } from './user/user.component';
+import { UserDetailComponent } from './user-detail/user-detail.component';
 
 describe('AppComponent', () => {
 
@@ -27,7 +28,9 @@ describe('AppComponent', () => {
         HomeComponent,
         SomeComponentComponent,
         NameIconPipe,
-        UsersTableComponent
+        UsersTableComponent,
+        UserComponent,
+        UserDetailComponent
       ],
       imports: [
         RouterModule.forRoot(routes),
