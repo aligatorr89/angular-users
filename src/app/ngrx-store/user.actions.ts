@@ -1,4 +1,5 @@
 import { createAction, props } from '@ngrx/store';
 import { IUser } from '../User';
 
-const usersAction = createAction('[UsersTable] Users', props<IUser[]>());
+export const usersActionType = '[Users] Users';
+export const usersAction = createAction(usersActionType, props<{users: IUser[]}>());

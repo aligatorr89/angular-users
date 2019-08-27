@@ -33,7 +33,7 @@ describe('UsersService', () => {
     httpTestingController.verify();
   });
 
-  describe('#getUsers', () => {
+  describe('#getUsers_opt1', () => {
 
     beforeEach(() => {
       usersService = TestBed.get(UsersService);
@@ -46,7 +46,7 @@ describe('UsersService', () => {
         fail
       );
 
-      // HeroService should have made one request to GET heroes from expected URL
+      // UsersService should have made one request to GET users from expected URL
       const req = httpTestingController.expectOne(usersService.usersUrl);
       expect(req.request.method).toEqual('GET');
 
@@ -56,6 +56,17 @@ describe('UsersService', () => {
 
       // Respond with the mock users
       req.flush(mockedUsers);
+    });
+  });
+
+  describe('#getUsers_opt2', () => {
+
+    beforeEach(() => {
+      usersService = TestBed.get(UsersService);
+    });
+
+    it('should return expected users (called once)', () => {
+
     });
   });
 

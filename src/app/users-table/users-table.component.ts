@@ -1,4 +1,6 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, OnDestroy } from '@angular/core';
+import { Subscription, Observable } from 'rxjs';
+import { Store, select } from '@ngrx/store';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { SelectionModel } from '@angular/cdk/collections';
@@ -10,10 +12,11 @@ import { UsersService } from '../angular-services/users.service';
   templateUrl: './users-table.component.html',
   styleUrls: ['./users-table.component.css']
 })
-export class UsersTableComponent implements OnInit {
-  usersData: IUser[];
+export class UsersTableComponent implements OnInit, OnDestroy {
 
-  constructor(private usersService: UsersService) { }
+  private usersSubscription$: Subscription;
+
+  constructor(private usersService: UsersService, private store: Store<{users: IUser[]}>) { }
 
   displayedCols: string[] = ['select', 'id', 'name', 'email'];
   dataSource = new MatTableDataSource<IUser>();
@@ -25,10 +28,20 @@ export class UsersTableComponent implements OnInit {
   ngOnInit() {
     this.getUsers();
     this.dataSource.sort = this.sort;
+    this.getUsersEffect();
+  }
+
+  ngOnDestroy(): void {
+    this.usersSubscription$.unsubscribe();
   }
 
   getUsers() {
-    this.usersService.getUsers().subscribe(users => this.dataSource.data = users)
+    this.usersSubscription$ = this.usersService.getUsers().subscribe(users => this.dataSource.data = users);
+  }
+
+  getUsersEffect() {
+    console.log('usersEffect here!');
+    this.store.dispatch({type: '[Users] Users'});
   }
 
   applyFilter(filterValue: string) {
@@ -61,5 +74,7 @@ export class UsersTableComponent implements OnInit {
   sumId() {
     return this.dataSource.filteredData.map(u => u.id).reduce((acc, value) => acc + value, 0);
   }
+
+
 
 }
