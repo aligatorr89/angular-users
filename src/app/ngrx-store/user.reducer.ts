@@ -1,12 +1,14 @@
-import { Action, createReducer, on} from '@ngrx/store';
-import { usersAction, usersActionType } from './user.actions';
+import { Action, createReducer, on } from '@ngrx/store';
+import { createEntityAdapter, EntityAdapter } from '@ngrx/entity';
 
+import { usersAction, usersActionType } from './user.actions';
 import { IUser } from '../User';
 
-const userReducer = createReducer(
-  on(usersAction, (state, {users}) => ({
-      loaded: true,
-      loading: false,
-      ids: users.map(user => user.id)
-  }))
+export const adapter: EntityAdapter<IUser> = createEntityAdapter<IUser>();
+
+export const initialState = adapter.getInitialState();
+
+export const userReducer = createReducer(
+  initialState,
+  on(usersAction, (state, {users}) => adapter.addMany(users, state))
 );
