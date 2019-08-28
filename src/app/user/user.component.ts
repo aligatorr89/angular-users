@@ -25,10 +25,11 @@ export class UserComponent implements OnInit {
   }
 
   getUser() {
-    // const id = parseInt(this.route.snapshot.paramMap.get('id'));
-    this.user$ = this.route.paramMap.pipe(
-      switchMap((params: ParamMap) => this.usersService.getUser(params.get('id')))
-    );
+    const id = this.route.snapshot.paramMap.get('id');
+    // this.user$ = this.route.paramMap.pipe(
+    //   switchMap((params: ParamMap) => this.usersService.getUser(params.get('id')))
+    // );
+    this.user$ = this.usersService.getUser(id);
   }
 
   // goBack(): void {

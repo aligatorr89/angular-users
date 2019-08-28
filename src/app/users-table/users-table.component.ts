@@ -20,7 +20,6 @@ export class UsersTableComponent implements OnInit, OnDestroy {
   private users$: Observable<IUser[]>;
 
   constructor(private usersService: UsersService, private store: Store<IUser[]>) {
-    console.log('constructor');
     // this.users$ = store.pipe(select(fromUsers.reducer));
   }
 
