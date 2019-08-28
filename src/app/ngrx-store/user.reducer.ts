@@ -1,14 +1,32 @@
 import { Action, createReducer, on } from '@ngrx/store';
-import { createEntityAdapter, EntityAdapter } from '@ngrx/entity';
+import { createEntityAdapter, EntityAdapter, EntityState } from '@ngrx/entity';
 
-import { usersAction, usersActionType } from './user.actions';
+import * as UsersAction from './user.actions';
 import { IUser } from '../User';
+
+export interface State extends EntityState<IUser> {
+  // additional state property
+  selectedUserId: number | null;
+}
 
 export const adapter: EntityAdapter<IUser> = createEntityAdapter<IUser>();
 
-export const initialState = adapter.getInitialState();
+export const initialState: State = adapter.getInitialState({
+  // additional entity state properties
+  selectedUserId: null,
+});
 
 export const userReducer = createReducer(
   initialState,
-  on(usersAction, (state, {users}) => adapter.addMany(users, state))
+  // on(getUsersActions.selectUser, (state, { userId }) => {
+  //   return { ...state, selectedUserId: userId };
+  // }),
+  on(UsersAction.getUsers, (state, { users }) => {
+    console.log('users to store', users);
+    return adapter.addMany(users, { ...state, selectedUserId: null });
+  })
 );
+
+export function reducer(state: State | undefined, action: Action) {
+  return userReducer(state, action);
+}
