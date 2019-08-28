@@ -9,12 +9,11 @@ import { IUser } from '../User'
 })
 export class UsersService {
 
-  protected usersUrl = 'https://jsonplaceholder.typicode.com/users/';
+  usersUrl = 'https://jsonplaceholder.typicode.com/users/';
 
   constructor(private http: HttpClient) { }
 
   getUsers(): Observable<IUser[]> {
-    console.log('UsersService', 'getUsers()')
     return this.http.get<IUser[]>(this.usersUrl);
   }
 

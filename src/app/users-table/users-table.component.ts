@@ -81,6 +81,4 @@ export class UsersTableComponent implements OnInit, OnDestroy {
     return this.dataSource.filteredData.map(u => u.id).reduce((acc, value) => acc + value, 0);
   }
 
-
-
 }
