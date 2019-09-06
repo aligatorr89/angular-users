@@ -2,7 +2,7 @@ import { TestBed, inject, async } from '@angular/core/testing';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { HttpClient, HttpResponse, HttpErrorResponse } from '@angular/common/http';
 
-import { IUser, mockedUsers } from '../User'
+import { IUser, USERS_URL, mockedUsers } from '../User';
 import { UsersService } from './users.service';
 
 describe('UsersService', () => {
@@ -47,7 +47,7 @@ describe('UsersService', () => {
       );
 
       // UsersService should have made one request to GET users from expected URL
-      const req = httpTestingController.expectOne(usersService.usersUrl);
+      const req = httpTestingController.expectOne(USERS_URL);
       expect(req.request.method).toEqual('GET');
 
       // const expectedResponse = new HttpResponse(
