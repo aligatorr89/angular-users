@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
-// import { Location } from '@angular/common';
 import { Observable } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
-import { UsersService } from "../angular-services/users.service";
-import { IUser } from "../User";
+import { UsersService } from "../../services/users.service";
+import { IUser } from "../../../User";
 
 @Component({
   selector: 'app-user',

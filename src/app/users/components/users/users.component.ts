@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Store, select } from '@ngrx/store';
 
-import { IUser } from '../User';
-import { UsersService } from '../angular-services/users.service';
-import * as UsersAction from '../ngrx-store/user.actions';
-import * as fromUsers from '../ngrx-store/user.reducer';
+import { IUser } from '../../../User';
+import { UsersService } from '../../services/users.service';
+import * as UsersAction from '../../actions/user.actions';
+import * as fromUsers from '../../reducers/user.reducer';
 
 @Component({
   selector: 'app-users',

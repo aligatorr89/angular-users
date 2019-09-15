@@ -4,21 +4,15 @@ import { HttpClientModule }    from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';
-
 import { RouterTestingModule } from '@angular/router/testing';
 import { AngularMaterialModule } from './angular-material.module';
-
 import { AppRoutingModule } from './app-routing.module';
 import { routes } from './app-routing.module';
-
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component'
 import { SomeComponentComponent } from './some-component/some-component.component';
 import { NameIconPipe } from './angular-pipes/name-icon.pipe';
-import { UsersTableComponent } from './users-table/users-table.component';
-import { UserComponent } from './user/user.component';
-import { UserDetailComponent } from './user-detail/user-detail.component';
-import { UsersComponent } from './users/users.component';
+import { UsersModule } from './users/users.module';
 
 describe('AppComponent', () => {
 
@@ -28,11 +22,7 @@ describe('AppComponent', () => {
         AppComponent,
         HomeComponent,
         SomeComponentComponent,
-        NameIconPipe,
-        UsersTableComponent,
-        UserComponent,
-        UserDetailComponent,
-        UsersComponent
+        NameIconPipe
       ],
       imports: [
         RouterModule.forRoot(routes),
@@ -41,7 +31,8 @@ describe('AppComponent', () => {
         HttpClientModule,
         BrowserAnimationsModule,
         AppRoutingModule,
-        RouterTestingModule
+        RouterTestingModule,
+        UsersModule
       ],
       providers: [
         {provide: APP_BASE_HREF, useValue: '/'}

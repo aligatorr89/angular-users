@@ -1,8 +1,8 @@
 import { Action, createReducer, on } from '@ngrx/store';
 import { createEntityAdapter, EntityAdapter, EntityState } from '@ngrx/entity';
 
-import * as UsersAction from './user.actions';
-import { IUser } from '../User';
+import * as UsersAction from './../actions/user.actions';
+import { IUser } from '../../User';
 
 export interface State extends EntityState<IUser> {
   // additional state property

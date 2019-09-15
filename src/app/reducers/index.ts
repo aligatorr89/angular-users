@@ -20,5 +20,4 @@ export const reducers: ActionReducerMap<State> = {
 export const metaReducers: MetaReducer<State>[] = !environment.production ? [] : [];
 
 export interface AppState {
-  users: IUser[]
 }

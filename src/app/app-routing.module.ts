@@ -1,14 +1,11 @@
-
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component'
-import { UsersComponent } from './users/users.component';
-import { UserComponent } from './user/user.component'
+import { HomeComponent } from './home/home.component';
+import { UsersModule } from './users/users.module';
 
 export const routes: Routes = [
   {path: '', component: HomeComponent, pathMatch: 'full'},
-  {path: 'users', component: UsersComponent},
-  {path: 'user/:id', component: UserComponent}
+  {path: 'users', loadChildren: () => UsersModule}
 ];
 
 @NgModule({

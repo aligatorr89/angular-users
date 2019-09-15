@@ -1,10 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
-import { AngularMaterialModule } from '../angular-material.module';
 import { Store } from '@ngrx/store';
 import { provideMockStore, MockStore } from '@ngrx/store/testing';
-
-import { IUser, mockedUsers } from '../User';
+import { AngularMaterialModule } from '../../../angular-material.module';
+import { IUser, mockedUsers } from '../../../User';
 import { UsersComponent } from './users.component';
 import { UsersTableComponent } from '../users-table/users-table.component';
 

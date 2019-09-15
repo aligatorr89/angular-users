@@ -4,7 +4,7 @@ import { HttpClient, HttpBackend, HttpHandler, HttpXhrBackend, XhrFactory }
   from '@angular/common/http';
 import { HttpTestingController } from '@angular/common/http/testing';
 import { UsersService } from './users.service';
-import { mockedUsers, USERS_URL } from '../User';
+import { mockedUsers, USERS_URL } from '../../User';
 
 export class BrowserXhr implements XhrFactory {
   build(): any { return <any>(new XMLHttpRequest()); }
