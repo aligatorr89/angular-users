@@ -12,6 +12,7 @@ export class UsersService {
   constructor(private http: HttpClient) { }
 
   getUsers(): Observable<IUser[]> {
+    console.log('UsersService.getUsers()');
     return this.http.get<IUser[]>(USERS_URL);
   }
 

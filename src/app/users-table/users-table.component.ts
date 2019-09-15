@@ -1,27 +1,21 @@
-import { Component, OnInit, ViewChild, OnDestroy } from '@angular/core';
-import { Subscription, Observable } from 'rxjs';
-import { Store, select } from '@ngrx/store';
+import { Component, OnInit, Input, ViewChild } from '@angular/core';
+
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { SelectionModel } from '@angular/cdk/collections';
 import { IUser } from '../User';
-import { UsersService } from '../angular-services/users.service';
-import * as UsersAction from '../ngrx-store/user.actions';
-import * as fromUsers from '../ngrx-store/user.reducer';
 
 @Component({
   selector: 'app-users-table',
   templateUrl: './users-table.component.html',
   styleUrls: ['./users-table.component.css']
 })
-export class UsersTableComponent implements OnInit, OnDestroy {
+export class UsersTableComponent implements OnInit {
 
-  private usersSubscription$: Subscription;
-  private users$: Observable<IUser[]>;
+  @Input()
+  users: IUser[];
 
-  constructor(private usersService: UsersService, private store: Store<IUser[]>) {
-    // this.users$ = store.pipe(select(fromUsers.reducer));
-  }
+  constructor() {}
 
   displayedCols: string[] = ['select', 'id', 'name', 'email'];
   dataSource = new MatTableDataSource<IUser>();
@@ -31,22 +25,8 @@ export class UsersTableComponent implements OnInit, OnDestroy {
   sort: MatSort;
 
   ngOnInit() {
-    this.getUsers();
     this.dataSource.sort = this.sort;
-    // this.getUsersStore();
-  }
-
-  ngOnDestroy(): void {
-    this.usersSubscription$.unsubscribe();
-  }
-
-  getUsers() {
-    this.usersSubscription$ = this.usersService.getUsers().subscribe(users => this.dataSource.data = users);
-  }
-
-  getUsersStore() {
-    console.log('usersStore here!');
-    this.store.dispatch(UsersAction.getUsers({users: []}));
+    this.dataSource.data = this.users;
   }
 
   applyFilter(filterValue: string) {

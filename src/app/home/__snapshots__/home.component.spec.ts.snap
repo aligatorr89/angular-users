@@ -38,17 +38,6 @@ exports[`HomeComponent should render correctly 1`] = `
         </nav>
       </h2>
     </li>
-    <li>
-      <h2>
-        <nav>
-          <a
-            routerlink="/users-table"
-          >
-            USERS-TABLE
-          </a>
-        </nav>
-      </h2>
-    </li>
   </ul>
 </app-home>
 `;

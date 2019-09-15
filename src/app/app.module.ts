@@ -20,6 +20,7 @@ import { environment } from '../environments/environment';
 import { EffectsModule } from '@ngrx/effects';
 import { AppEffects } from './app.effects';
 import { UserEffects } from './ngrx-effects/user.effects';
+import { UsersComponent } from './users/users.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { UserEffects } from './ngrx-effects/user.effects';
     SomeComponentComponent,
     UserComponent,
     UserDetailComponent,
-    NameIconPipe
+    NameIconPipe,
+    UsersComponent
   ],
   imports: [
     BrowserModule,

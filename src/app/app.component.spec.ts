@@ -18,6 +18,7 @@ import { NameIconPipe } from './angular-pipes/name-icon.pipe';
 import { UsersTableComponent } from './users-table/users-table.component';
 import { UserComponent } from './user/user.component';
 import { UserDetailComponent } from './user-detail/user-detail.component';
+import { UsersComponent } from './users/users.component';
 
 describe('AppComponent', () => {
 
@@ -30,7 +31,8 @@ describe('AppComponent', () => {
         NameIconPipe,
         UsersTableComponent,
         UserComponent,
-        UserDetailComponent
+        UserDetailComponent,
+        UsersComponent
       ],
       imports: [
         RouterModule.forRoot(routes),

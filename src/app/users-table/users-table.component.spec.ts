@@ -1,8 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { AngularMaterialModule } from '../angular-material.module';
-import { Store } from '@ngrx/store';
-import { provideMockStore, MockStore } from '@ngrx/store/testing';
 
 import { UsersTableComponent } from './users-table.component';
 import { IUser, mockedUsers } from '../User';
@@ -16,11 +13,9 @@ describe('UsersTableComponent', () => {
     TestBed.configureTestingModule({
       declarations: [ UsersTableComponent ],
       imports: [
-        HttpClientTestingModule,
         AngularMaterialModule
       ],
       providers: [
-        provideMockStore()
       ]
     })
     .compileComponents();
