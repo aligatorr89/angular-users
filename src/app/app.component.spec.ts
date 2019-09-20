@@ -13,6 +13,8 @@ import { HomeComponent } from './home/home.component'
 import { SomeComponentComponent } from './some-component/some-component.component';
 import { NameIconPipe } from './angular-pipes/name-icon.pipe';
 import { UsersModule } from './users/users.module';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from '../environments/environment';
 
 describe('AppComponent', () => {
 
@@ -32,6 +34,7 @@ describe('AppComponent', () => {
         BrowserAnimationsModule,
         AppRoutingModule,
         RouterTestingModule,
+        StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
         UsersModule
       ],
       providers: [

@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
+import { tap } from 'rxjs/operators';
 import { Store, select } from '@ngrx/store';
 
 import { IUser } from '../../../User';
-import { UsersService } from '../../services/users.service';
 import * as UsersAction from '../../actions/user.actions';
-import * as fromUsers from '../../reducers/user.reducer';
+import * as fromUsers from '../../reducers/users.reducer';
+import * as selectUsers from '../../reducers';
 
 @Component({
   selector: 'app-users',
@@ -16,8 +17,12 @@ export class UsersComponent implements OnInit {
 
     private users$: Observable<IUser[]>;
 
-    constructor(private usersService: UsersService, private store: Store<IUser[]>) {
-      // this.users$ = store.pipe(select(fromUsers.reducer));
+    constructor(private store: Store<selectUsers.UsersState>) {
+      this.users$ = store.pipe(
+        tap(u => console.log(u)),
+        select(selectUsers.getUsersSelector)
+      );
+      // this.users$ = store.select(state => state.users.users ? state.users.users : state.users);
     }
 
     ngOnInit() {
@@ -25,11 +30,6 @@ export class UsersComponent implements OnInit {
     }
 
     getUsers() {
-      this.users$ = this.usersService.getUsers();
-    }
-
-    getUsersStore() {
-      console.log('usersStore here!');
-      this.store.dispatch(UsersAction.getUsers({users: []}));
+      this.store.dispatch(new UsersAction.LoadUsers());
     }
 }
