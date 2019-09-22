@@ -13,7 +13,11 @@ import { HomeComponent } from './home/home.component'
 import { SomeComponentComponent } from './some-component/some-component.component';
 import { NameIconPipe } from './angular-pipes/name-icon.pipe';
 import { UsersModule } from './users/users.module';
+import { EffectsModule } from '@ngrx/effects';
+import { reducers, metaReducers } from './reducers';
+import { Store, StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { AppEffects } from './app.effects';
 import { environment } from '../environments/environment';
 
 describe('AppComponent', () => {
@@ -34,7 +38,15 @@ describe('AppComponent', () => {
         BrowserAnimationsModule,
         AppRoutingModule,
         RouterTestingModule,
+        StoreModule.forRoot(reducers, {
+          metaReducers,
+          runtimeChecks: {
+            strictStateImmutability: true,
+            strictActionImmutability: true
+          }
+        }),
         StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
+        EffectsModule.forRoot([AppEffects]),
         UsersModule
       ],
       providers: [

@@ -6,6 +6,7 @@ import { AngularMaterialModule } from '../../../angular-material.module';
 import { IUser, mockedUsers } from '../../../shared/models/User';
 import { UsersComponent } from './users.component';
 import { UsersTableComponent } from '../users-table/users-table.component';
+import { UsersListComponent } from '../users-list/users-list.component';
 
 describe('UsersComponent', () => {
   let component: UsersComponent;
@@ -14,7 +15,7 @@ describe('UsersComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ UsersComponent, UsersTableComponent ],
+      declarations: [ UsersComponent, UsersTableComponent, UsersListComponent ],
       imports: [
         HttpClientTestingModule,
         AngularMaterialModule
