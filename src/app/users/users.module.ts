@@ -9,19 +9,20 @@ import { UsersComponent } from './components/users/users.component';
 import { UsersTableComponent } from './components/users-table/users-table.component';
 import { UserComponent } from './components/user/user.component';
 import { UserDetailComponent } from './components/user-detail/user-detail.component';
-import * as usersReducer from './reducers/users.reducer';
+import * as usersReducer from './reducers/';
 import { UsersEffects } from './effects/users.effects';
+import { UsersListComponent } from './components/users-list/users-list.component';
 
 @NgModule({
-  declarations: [UsersComponent, UsersTableComponent, UserComponent, UserDetailComponent],
+  declarations: [UsersComponent, UsersTableComponent, UserComponent, UserDetailComponent, UsersListComponent],
   imports: [
     CommonModule,
     AngularMaterialModule,
-    RouterModule.forRoot([
+    RouterModule.forChild([
       {path: 'users', component: UsersComponent},
       {path: 'user/:id', component: UserComponent}
     ]),
-    StoreModule.forFeature('users', usersReducer.reducer),
+    StoreModule.forFeature('users', usersReducer.reducers),
     EffectsModule.forFeature([UsersEffects]),
   ]
 })

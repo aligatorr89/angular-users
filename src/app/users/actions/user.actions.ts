@@ -13,7 +13,7 @@ export class LoadUsers implements Action {
 
 export class LoadUsersSuccess implements Action {
   readonly type = UsersActionTypes.LoadUsersSuccess;
-  constructor(public payload: {users: IUser[]}) {}
+  constructor(public payload: IUser[]) {}
 }
 
 export class GetUsers implements Action {

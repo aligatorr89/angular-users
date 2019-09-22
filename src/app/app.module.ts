@@ -38,6 +38,7 @@ import { UsersModule } from './users/users.module';
       }
     }),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
+
     EffectsModule.forRoot([AppEffects])
   ],
   providers: [

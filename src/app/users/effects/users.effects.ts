@@ -17,7 +17,7 @@ export class UsersEffects {
     () => {
       return this.usersService.getUsers();
     },
-    map(users => new LoadUsersSuccess({users})),
+    map(users => new LoadUsersSuccess(users)),
     catchError(() => EMPTY)
   )
 }

@@ -1,11 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { tap } from 'rxjs/operators';
 import { Store, select } from '@ngrx/store';
 
 import { IUser } from '../../../User';
 import * as UsersAction from '../../actions/user.actions';
-import * as fromUsers from '../../reducers/users.reducer';
 import * as selectUsers from '../../reducers';
 
 @Component({
@@ -19,10 +17,8 @@ export class UsersComponent implements OnInit {
 
     constructor(private store: Store<selectUsers.UsersState>) {
       this.users$ = store.pipe(
-        tap(u => console.log(u)),
         select(selectUsers.getUsersSelector)
       );
-      // this.users$ = store.select(state => state.users.users ? state.users.users : state.users);
     }
 
     ngOnInit() {

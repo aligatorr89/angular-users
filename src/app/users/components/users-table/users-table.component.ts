@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ViewChild } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, OnChanges, SimpleChanges } from '@angular/core';
 
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
@@ -10,9 +10,9 @@ import { IUser } from '../../../User';
   templateUrl: './users-table.component.html',
   styleUrls: ['./users-table.component.css']
 })
-export class UsersTableComponent implements OnInit {
+export class UsersTableComponent implements OnInit, OnChanges {
 
-  @Input()
+  @Input('users')
   users: IUser[];
 
   constructor() {}
@@ -26,6 +26,10 @@ export class UsersTableComponent implements OnInit {
 
   ngOnInit() {
     this.dataSource.sort = this.sort;
+    this.dataSource.data = this.users;
+  }
+
+  ngOnChanges(changes: SimpleChanges) {
     this.dataSource.data = this.users;
   }
 
