@@ -9,6 +9,7 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "module": "esnext",
+    "allowJs": true,
     "moduleResolution": "node",
     "importHelpers": true,
     "target": "es2015",

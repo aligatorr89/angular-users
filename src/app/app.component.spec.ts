@@ -4,19 +4,17 @@ import { HttpClientModule }    from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';
-
 import { RouterTestingModule } from '@angular/router/testing';
 import { AngularMaterialModule } from './angular-material.module';
-
 import { AppRoutingModule } from './app-routing.module';
 import { routes } from './app-routing.module';
-
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component'
 import { SomeComponentComponent } from './some-component/some-component.component';
 import { NameIconPipe } from './angular-pipes/name-icon.pipe';
-
-import { UsersTableComponent } from './users-table/users-table.component';
+import { UsersModule } from './users/users.module';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from '../environments/environment';
 
 describe('AppComponent', () => {
 
@@ -26,8 +24,7 @@ describe('AppComponent', () => {
         AppComponent,
         HomeComponent,
         SomeComponentComponent,
-        NameIconPipe,
-        UsersTableComponent
+        NameIconPipe
       ],
       imports: [
         RouterModule.forRoot(routes),
@@ -36,7 +33,9 @@ describe('AppComponent', () => {
         HttpClientModule,
         BrowserAnimationsModule,
         AppRoutingModule,
-        RouterTestingModule
+        RouterTestingModule,
+        StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
+        UsersModule
       ],
       providers: [
         {provide: APP_BASE_HREF, useValue: '/'}

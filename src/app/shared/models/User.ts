@@ -22,6 +22,8 @@ export interface IUser {
   }
 }
 
+export const USERS_URL = 'https://jsonplaceholder.typicode.com/users/';
+
 export const mockedUsers: IUser[] = [
   {
     "id": 1,

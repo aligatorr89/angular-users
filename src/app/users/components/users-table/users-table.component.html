@@ -1,9 +1,8 @@
-<div>
+<div *ngIf="users">
   <mat-form-field>
     <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
   </mat-form-field>
   <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
-
     <ng-container matColumnDef="select">
       <th mat-header-cell *matHeaderCellDef>
         <mat-checkbox (change)="$event ? masterToggle() : null"

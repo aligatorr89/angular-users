@@ -1,19 +1,21 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, OnChanges, SimpleChanges } from '@angular/core';
+
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { SelectionModel } from '@angular/cdk/collections';
-import { IUser } from '../User';
-import { UsersService } from '../angular-services/users.service';
+import { IUser } from '../../../shared/models/User';
 
 @Component({
   selector: 'app-users-table',
   templateUrl: './users-table.component.html',
   styleUrls: ['./users-table.component.css']
 })
-export class UsersTableComponent implements OnInit {
-  usersData: IUser[];
+export class UsersTableComponent implements OnInit, OnChanges {
 
-  constructor(private usersService: UsersService) { }
+  @Input('users')
+  users: IUser[];
+
+  constructor() {}
 
   displayedCols: string[] = ['select', 'id', 'name', 'email'];
   dataSource = new MatTableDataSource<IUser>();
@@ -23,12 +25,12 @@ export class UsersTableComponent implements OnInit {
   sort: MatSort;
 
   ngOnInit() {
-    this.getUsers();
     this.dataSource.sort = this.sort;
+    this.dataSource.data = this.users;
   }
 
-  getUsers() {
-    this.usersService.getUsers().subscribe(users => this.dataSource.data = users)
+  ngOnChanges(changes: SimpleChanges) {
+    this.dataSource.data = this.users;
   }
 
   applyFilter(filterValue: string) {

@@ -73,15 +73,6 @@ describe('HomeComponent', () => {
       .nativeElement.getAttribute('routerLink')
     )
     .toBe('/users');
-
-    expect(ul
-      .query(By.css('li:nth-child(3)'))
-      .query(By.css('h2'))
-      .query(By.css('nav'))
-      .query(By.css('a'))
-      .nativeElement.getAttribute('routerLink')
-    )
-    .toBe('/users-table');
   });
 
   test('should have method click which adds someNumber', async(() => {

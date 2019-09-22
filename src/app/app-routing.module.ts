@@ -1,12 +1,11 @@
-
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component'
-import { UsersTableComponent } from "./users-table/users-table.component";
+import { HomeComponent } from './home/home.component';
+import { UsersModule } from './users/users.module';
 
 export const routes: Routes = [
   {path: '', component: HomeComponent, pathMatch: 'full'},
-  {path: 'users-table', component: UsersTableComponent}
+  {path: 'users', loadChildren: () => UsersModule}
 ];
 
 @NgModule({
