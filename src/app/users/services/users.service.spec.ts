@@ -2,7 +2,7 @@ import { TestBed, inject, async } from '@angular/core/testing';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { HttpClient, HttpResponse, HttpErrorResponse } from '@angular/common/http';
 
-import { IUser, USERS_URL, mockedUsers } from '../../User';
+import { IUser, USERS_URL, mockedUsers } from '../../shared/models/User';
 import { UsersService } from './users.service';
 
 describe('UsersService', () => {

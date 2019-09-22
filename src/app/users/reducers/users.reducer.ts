@@ -1,7 +1,7 @@
 import { Action, ActionReducerMap } from '@ngrx/store';
 import { createEntityAdapter, EntityState } from '@ngrx/entity';
 import { UsersActionTypes, UsersActionUnion } from '../actions/user.actions';
-import { IUser } from '../../User';
+import { IUser } from '../../shared/models/User';
 
 export const usersFeatureKey = 'users';
 export const allUsersKey = 'allUsers';

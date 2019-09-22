@@ -3,7 +3,7 @@ import { ActivatedRoute, ParamMap } from '@angular/router';
 import { Observable } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
 import { UsersService } from "../../services/users.service";
-import { IUser } from "../../../User";
+import { IUser } from "../../../shared/models/User";
 
 @Component({
   selector: 'app-user',

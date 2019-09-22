@@ -3,7 +3,7 @@ import { HttpClientTestingModule, HttpTestingController } from '@angular/common/
 import { Store } from '@ngrx/store';
 import { provideMockStore, MockStore } from '@ngrx/store/testing';
 import { AngularMaterialModule } from '../../../angular-material.module';
-import { IUser, mockedUsers } from '../../../User';
+import { IUser, mockedUsers } from '../../../shared/models/User';
 import { UsersComponent } from './users.component';
 import { UsersTableComponent } from '../users-table/users-table.component';
 

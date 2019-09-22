@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Store, select } from '@ngrx/store';
 
-import { IUser } from '../../../User';
+import { IUser } from '../../../shared/models/User';
 import * as UsersAction from '../../actions/user.actions';
 import * as selectUsers from '../../reducers';
 

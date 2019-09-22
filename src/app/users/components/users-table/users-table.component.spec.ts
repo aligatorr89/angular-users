@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { AngularMaterialModule } from '../../../angular-material.module';
 
 import { UsersTableComponent } from './users-table.component';
-import { IUser, mockedUsers } from '../../../User';
+import { IUser, mockedUsers } from '../../../shared/models/User';
 
 describe('UsersTableComponent', () => {
   let component: UsersTableComponent;

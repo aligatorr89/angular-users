@@ -3,7 +3,7 @@ import { Component, OnInit, Input, ViewChild, OnChanges, SimpleChanges } from '@
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { SelectionModel } from '@angular/cdk/collections';
-import { IUser } from '../../../User';
+import { IUser } from '../../../shared/models/User';
 
 @Component({
   selector: 'app-users-table',
