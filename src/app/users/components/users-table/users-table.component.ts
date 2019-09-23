@@ -21,16 +21,16 @@ export class UsersTableComponent implements OnInit, OnChanges {
   dataSource = new MatTableDataSource<IUser>();
   selection = new SelectionModel<IUser>(true, []);
 
-  @ViewChild(MatSort, {static: true})
+  @ViewChild(MatSort, {static: false})
   sort: MatSort;
 
   ngOnInit() {
-    this.dataSource.sort = this.sort;
     this.dataSource.data = this.users;
+    this.dataSource.sort = this.sort;
   }
 
   ngOnChanges(changes: SimpleChanges) {
-    this.dataSource.data = this.users;
+    this.ngOnInit();
   }
 
   applyFilter(filterValue: string) {
